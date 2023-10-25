@@ -28,6 +28,18 @@ function userInfo(strings, userName, age, phone, address) {
   console.log(age);
   console.log(phone);
   console.log(address);
+
+  // 이런식으로 쓸 수 있기 때문에 함수로 사용한다
+  if (age >= 19 && age <= 34) {
+    age = "청년";
+  }
+
+  address = address.split(" ")[0];
+
+  let first = phone.slice(0, phone.length - 4);
+  phone = first.padEnd(phone.length, "X"); // 빈 자릿수 채우는 함수
+
+  return strings[0] + userName + strings[1] + age + strings[2] + phone + strings[3] + address + strings[4];
 }
 
 var kim = userInfo`
@@ -36,3 +48,5 @@ var kim = userInfo`
   전화번호: ${user.phone}
   주소: ${user.address}
 `;
+
+console.log(kim);
