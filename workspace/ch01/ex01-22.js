@@ -1,4 +1,4 @@
-// TODO: hoisting 단원
+// TODO: hoisting 단원 => 같은 함수 명을 선언하면 함수가 재할당
 
 function sum(a, b = 0) {
   return a + b;
@@ -7,6 +7,7 @@ console.log(sum(10, 20)); // 아래에서 선언한 함수가 실행됨(호이�
 console.log(sum(30));
 
 // TODO: IIFE pattern
+// 다른 호이스팅 블록을 가짐
 (function () {
   // 구조분해할당과 같이 사용
   function sum([x = 0, y = 0] = []) {
