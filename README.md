@@ -28,6 +28,7 @@
 ## 샘플 코드 복사
 * 프로젝트 내에 workspace 폴더 생성
 * sample/day1 폴더 내부의 파일과 폴더를 workspace 폴더에 복사
+* sample/day2 폴더 내부의 파일과 폴더를 workspace 폴더에 복사(index.html 먼저 삭제)
 * 수업중 작성된 강사의 완성된 코드는 workspace-ins 폴더에서 확인
 
 ## 서버 테스트
