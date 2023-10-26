@@ -1,1 +1,53 @@
 // ex03-05.js 복사
+// 고등학교 성적관리 생성자 함수(총점과 평균 계산)
+
+// 다른 파일에 있는 생성자함수와 충돌해서 에러 발생 => 즉시실행 함수 안에 넣어서 별도의 스코프를 만들어서 실행
+(function () {
+  class Highschool {
+    constructor(kor, eng) {
+      this.kor = kor;
+      this.eng = eng;
+    }
+    static getTotal() {
+      //별도의 객체 생성 없이 Highschool.getTotal()로 실행 가능 <=> sum은 s1.sum()으로 실행
+      return 100;
+    }
+
+    sum() {
+      return this.kor + this.eng;
+    }
+    avg() {
+      return Math.round(this.sum() / 2);
+    }
+  }
+
+  var s1 = new Highschool(100, 91); //new로 호출하면 constructor 실행
+  console.log(s1.sum());
+  console.log(s1.avg());
+
+  // 대학교 성적관리 생성자 함수(총점, 평균, 학점 계산)
+  class College extends Highschool {
+    constructor(kor, eng) {
+      super(kor, eng);
+    }
+    grade() {
+      var grade = "F";
+      var avg = this.avg();
+      if (avg >= 90) {
+        grade = "A";
+      } else if (avg >= 80) {
+        grade = "B";
+      } else if (avg >= 70) {
+        grade = "C";
+      } else if (avg >= 60) {
+        grade = "D";
+      }
+      return grade;
+    }
+  }
+
+  var s2 = new College(80, 71);
+  console.log(s2.sum());
+  console.log(s2.avg());
+  console.log(s2.grade());
+})();
