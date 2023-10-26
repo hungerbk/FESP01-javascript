@@ -17,7 +17,15 @@ function smallest(nums) {
   // return min;
 
   // return Math.min.apply(this, nums);
-  return Math.min(...nums);
+  // return Math.min(...nums);
+
+  // 'js/mylib.js'에 추가
+  // Array.prototype.min = function () {
+  //   return Math.min(...this);
+  // };
+  // Array.prototype.min = () => Math.min(...this); // 이렇게 하면 this가 윈도우 객체가 됨
+
+  return nums.min();
 }
 
 console.log(smallest([10, 100])); // 10
