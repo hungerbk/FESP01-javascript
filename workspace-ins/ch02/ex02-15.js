@@ -13,4 +13,4 @@ var counter = {
 
 counter.visit();
 counter.visit();
-console.log('합계', counter.count);
+console.log('합계', counter.count, count);

@@ -46,7 +46,7 @@ console.log("남은 할일 수", reaminCount);
 
 // _id=2인 할일
 var todo = {};
-for (let i = 0; i < todolist.length; i += 1) {
+for (let i = 0; i < todolist.length; i += 2) {
   if (todolist[i]._id === 2) {
     todo = todolist[i].title;
   }
