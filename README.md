@@ -1,4 +1,4 @@
-# 프론트엔드 스쿨 플러스: 자바스크립트 프로그래밍
+# 멋쟁이 사자처럼 Front-End School Plus 1기: Javascript 프로그래밍
 * GitHub URL: https://github.com/uzoolove/FESP01-javascript
 
 ## 개발환경 구축
@@ -25,19 +25,42 @@
 	* 복사할 적당한 폴더 선택 후 Select as Repository Destination 선택
 	* Open 선택
 
+## 수업 자료
+* PPT 폴더 확인
+
 ## 샘플 코드 복사
-* 프로젝트 내에 workspace 폴더 생성
+* 프로젝트 내에 workspace 폴더 생성 후 sample 폴더 복사해서 실습 진행
+* 완성된 강사의 코드는 workspace-ins 폴더에서 확인
+### 1일차
 * sample/day1 폴더 내부의 파일과 폴더를 workspace 폴더에 복사
-* sample/day2 폴더 내부의 파일과 폴더를 workspace 폴더에 복사(index.html 먼저 삭제)
-* 수업중 작성된 강사의 완성된 코드는 workspace-ins 폴더에서 확인
+### 2일차
+* sample/day2 폴더 내부의 파일과 폴더를 workspace 폴더에 복사(workspace/index.html 먼저 삭제)
+### 3일차
+* sample/day3 폴더 내부의 파일과 폴더를 workspace 폴더에 복사(workspace/index.html 먼저 삭제)
+### 4일차
+* sample/day4 폴더 내부의 파일과 폴더를 workspace 폴더에 복사(workspace/index.html 먼저 삭제)
 
 ## 서버 테스트
-* VS Code 터미널에서 workspace 폴더로 이동 후 실행
+* VSCode 터미널에서 workspace 폴더로 이동 후 실행
+  - 강사의 완성된 코드를 테스트하려면 workspace-ins 폴더로 이동
 ```
 npx serve .
 ```
 * http://localhost:3000 접속
   - 이미 3000 포트가 사용중일 경우 콘솔 안내 메세지에 따라서 접속
+* 각 예제 클릭해서 브라우저 개발자 도구 > 콘솔 탭에서 결과 확인
+
+## 서버 교체
+* nodejs 서버 구동(5강 AJAX 테스트에 필요)
+  - 기존에 serve로 구동한 서버는 종료하고 대신 AJAX 테스트에 필요한 서버로 교체 구동
+```
+# 프로젝트 루트에서 실행
+# 강사의 완성된 코드를 테스트하려면 cd workspace-ins/nodejs
+cd workspace/nodejs
+npm i
+npm start
+```
+* http://localhost:33080 접속
 
 ## 소스코드 공유
 * 본인의 소스코드를 강사에게 공유하고 싶을때
